@@ -8,6 +8,7 @@ import { MapPage } from './pages/MapPage';
 import { DressCodePage } from './pages/DressCodePage';
 import { TimerPage } from './pages/TimerPage';
 import { ContactsPage } from './pages/ContactsPage';
+import { FooterPage } from './pages/FooterPage';
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
         <DressCodePage />
         <TimerPage />
         <ContactsPage />
+        <FooterPage />
       </div>
     </YMaps>
   );

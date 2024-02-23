@@ -27,7 +27,7 @@ export const MainPage = () => {
       <ChevronText>Александр и Полина,</ChevronText>
       <Invite>Приглашаем вас на свадьбу</Invite>
       <OurNames>
-        Дарьи<And>&</And>Дмитрия
+        Дарьи <And>&</And> Дмитрия
       </OurNames>
       <ImgContainer>
         <StyledImg src={photo} alt="photo" />
