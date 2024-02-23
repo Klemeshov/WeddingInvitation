@@ -6,6 +6,7 @@ import { Fonts } from './styles/Fonts';
 import { MainPage } from './pages/MainPage';
 import { MapPage } from './pages/MapPage';
 import { DressCodePage } from './pages/DressCodePage';
+import { TimerPage } from './pages/TimerPage';
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
         <MainPage />
         <MapPage />
         <DressCodePage />
+        <TimerPage />
       </div>
     </YMaps>
   );
