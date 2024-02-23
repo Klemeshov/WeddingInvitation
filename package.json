@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Klemeshov.github.io/WeddingInvitation",
   "name": "weddinginvitation",
   "version": "0.0.1",
   "scripts": {
@@ -6,7 +7,9 @@
     "build": "webpack --config webpack/webpack.prod.config.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",
@@ -41,6 +44,7 @@
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "prettier": "3.2.4",
     "style-loader": "^3.3.4",
