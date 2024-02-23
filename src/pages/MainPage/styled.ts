@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 148px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (max-width: 1024px) {
     padding-top: 74px;

@@ -6,6 +6,5 @@ export const DefaultStyles = createGlobalStyle`
         color: #160824;
         font-family: Cormorant Garamond, serif;
         font-weight: 500;
-        transition: 0.5s;
     }
 `;
