@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Container, Content, TimeContainer, TimeLabel, TimerContainer, Title } from './styled';
 
-const weddingDate = new Date('2024-04-22 15:20');
+const weddingDate = new Date('2024-04-22 15:21');
 
 const createLabel = (number: number, titles: [string, string, string]) => {
   const cases = [2, 0, 1, 1, 1, 2];
@@ -20,7 +20,7 @@ export const TimerPage = () => {
     setState({
       days: Math.max(Math.trunc(diff / 3600 / 1000 / 24), 0),
       hours: Math.max(Math.trunc(diff / 3600 / 1000) % 24, 0),
-      minutes: Math.max((Math.trunc(diff / 60 / 1000) + 1) % 60, 0)
+      minutes: Math.max(Math.trunc(diff / 60 / 1000) % 60, 0)
     });
   }, []);
 
