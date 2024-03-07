@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Map } from '@pbe/react-yandex-maps';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { LocationSVG } from '../../assets/images/Location';
 
 export const Container = styled.div`
@@ -31,7 +32,7 @@ export const Title = styled.div`
   }
 `;
 
-export const When = styled.div`
+export const When = styled(AnimationOnScroll)`
   font-family: MyFont, serif;
   font-size: 200px;
   line-height: 200px;

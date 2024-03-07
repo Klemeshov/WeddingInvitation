@@ -46,21 +46,6 @@ export const OurNames = styled.span`
   }
 `;
 
-export const And = styled.span`
-  position: relative;
-  display: inline-block;
-  animation: and 4s both;
-  animation-delay: 1s;
-  color: #d1cbc8;
-
-  @keyframes and {
-    0%,
-    80% {
-      transform: rotateY(360deg);
-    }
-  }
-`;
-
 export const StyledImg = styled.img`
   width: 100%;
   border-radius: 4px;
@@ -115,7 +100,6 @@ export const RightBreath = styled.img`
   animation-name: move-r;
   animation-duration: 4s;
   animation-timing-function: ease-out;
-  animation-delay: 1s;
   animation-fill-mode: both;
 
   @keyframes move-r {

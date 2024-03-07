@@ -26,7 +26,9 @@ export const MapPage = ({ where }: { where: 'registry' | 'hall' }) => {
   return (
     <Container>
       <Title>Ждём Вас</Title>
-      <When>{where === 'registry' ? '22 апреля, 15:00' : '22 апреля, 17:00'}</When>
+      <When animateIn="animate__jackInTheBox" animateOnce>
+        {where === 'registry' ? '22 апреля, 15:00' : '22 апреля, 17:00'}
+      </When>
       <Where>
         {where === 'registry'
           ? 'Дворец бракосочетания № 1 Английская набережная'

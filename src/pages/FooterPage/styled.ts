@@ -40,10 +40,6 @@ export const OurNames = styled.div`
   }
 `;
 
-export const And = styled.span`
-  color: #d1cbc8;
-`;
-
 export const Footer = styled.div`
   background: url(${BG}) center center;
   width: 100%;

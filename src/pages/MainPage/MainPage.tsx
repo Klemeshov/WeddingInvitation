@@ -1,7 +1,6 @@
 import React from 'react';
 import { ChevronText } from '../../components/ChevronText';
 import {
-  And,
   Container,
   ImgContainer,
   Invite,
@@ -20,6 +19,7 @@ import {
 } from './styled';
 import photo from '../../assets/images/photo.png';
 import breath from '../../assets/images/breath.png';
+import { And } from '../../components/And';
 
 export const MainPage = ({ name }: { name: string }) => {
   return (
@@ -27,7 +27,7 @@ export const MainPage = ({ name }: { name: string }) => {
       <ChevronText>{name},</ChevronText>
       <Invite>Приглашаем вас на свадьбу</Invite>
       <OurNames>
-        Дарьи <And>&</And> Дмитрия
+        Дарьи <And withDelay /> Дмитрия
       </OurNames>
       <ImgContainer>
         <StyledImg src={photo} alt="photo" />

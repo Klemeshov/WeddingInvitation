@@ -9,6 +9,8 @@ export const Container = styled.div`
   padding: 160px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100vw;
+  overflow: hidden;
 
   @media (max-width: 1024px) {
     padding-top: 80px;
