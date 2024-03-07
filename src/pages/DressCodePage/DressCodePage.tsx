@@ -19,7 +19,7 @@ import man3 from '../../assets/images/man3.png';
 import man4 from '../../assets/images/man4.png';
 import women1 from '../../assets/images/women1.png';
 import women2 from '../../assets/images/women2.png';
-import women3 from '../../assets/images/women3.png';
+import women3 from '../../assets/images/women3.jpg';
 import women4 from '../../assets/images/women4.png';
 import women5 from '../../assets/images/women5.png';
 
