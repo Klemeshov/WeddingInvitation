@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-export const Container = styled.div`
+export const Container = styled(AnimationOnScroll)`
   display: flex;
   flex-direction: column;
   align-items: center;

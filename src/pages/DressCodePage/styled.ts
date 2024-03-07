@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -69,17 +70,47 @@ export const ColorsContainer = styled.div`
   }
 `;
 
-export const ColorCircle = styled.span<{ $color: string; $withBorder?: boolean }>`
+export const ColorCircle = styled.span<{ $color: string; $withBorder?: boolean; $delay: number }>`
   box-sizing: content-box;
   width: 100px;
   height: 100px;
   border-radius: 100px;
   background: ${({ $color }) => $color};
   ${({ $withBorder }) => $withBorder && 'border: 2px solid #D1CBC8'};
+  animation-name: bounce;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: ${({ $delay }) => `${$delay / 3}s`};
 
   @media (max-width: 1024px) {
     width: 65px;
     height: 65px;
+  }
+
+  @keyframes bounce {
+    0%,
+    4%,
+    11%,
+    20% {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translateZ(0);
+    }
+    8%,
+    8.6% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+    14% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+    16% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translateZ(0) scaleY(0.95);
+    }
+    18% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
   }
 `;
 
@@ -117,7 +148,7 @@ export const Gender = styled.div`
   }
 `;
 
-export const ExampleImage = styled.span<{ $src: string; $area: string }>`
+export const ExampleImage = styled(AnimationOnScroll)<{ $src: string; $area: string }>`
   background: url(${({ $src }) => $src}) no-repeat center center;
   background-size: cover;
   grid-area: ${({ $area }) => $area};

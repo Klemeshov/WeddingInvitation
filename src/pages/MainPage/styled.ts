@@ -47,7 +47,18 @@ export const OurNames = styled.span`
 `;
 
 export const And = styled.span`
+  position: relative;
+  display: inline-block;
+  animation: and 4s both;
+  animation-delay: 1s;
   color: #d1cbc8;
+
+  @keyframes and {
+    0%,
+    80% {
+      transform: rotateY(360deg);
+    }
+  }
 `;
 
 export const StyledImg = styled.img`
@@ -74,21 +85,48 @@ export const ImgContainer = styled.div`
 `;
 
 export const LeftBreath = styled.img`
-  left: min(0px, calc((100vw - 1440px) / 10));
   top: 0;
   position: absolute;
   z-index: -1;
   user-select: none;
   opacity: 50%;
+  animation-name: move-l;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+
+  @keyframes move-l {
+    from {
+      left: -720px;
+    }
+
+    to {
+      left: min(0px, calc((100vw - 1440px) / 10));
+    }
+  }
 `;
 export const RightBreath = styled.img`
-  right: min(0px, calc((100vw - 1440px) / 10));
   top: 0;
   transform: scale(-1, 1);
   position: absolute;
   z-index: -1;
   user-select: none;
   opacity: 50%;
+  animation-name: move-r;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+
+  @keyframes move-r {
+    from {
+      right: -720px;
+    }
+
+    to {
+      right: min(0px, calc((100vw - 1440px) / 10));
+    }
+  }
 `;
 
 export const LeftArrowContainer = styled.div`

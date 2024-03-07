@@ -21,10 +21,10 @@ import {
 import photo from '../../assets/images/photo.png';
 import breath from '../../assets/images/breath.png';
 
-export const MainPage = () => {
+export const MainPage = ({ name }: { name: string }) => {
   return (
     <Container>
-      <ChevronText>Александр и Полина,</ChevronText>
+      <ChevronText>{name},</ChevronText>
       <Invite>Приглашаем вас на свадьбу</Invite>
       <OurNames>
         Дарьи <And>&</And> Дмитрия

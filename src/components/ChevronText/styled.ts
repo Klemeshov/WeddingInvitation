@@ -4,6 +4,17 @@ export const Container = styled.div`
   display: flex;
   width: fit-content;
   align-items: center;
+  animation-name: chevron;
+  animation-duration: 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+
+  @keyframes chevron {
+    to {
+      transform: rotate(2deg);
+    }
+  }
 `;
 
 export const TextContainer = styled.div`

@@ -3,6 +3,11 @@ import { Container, Content, TimeContainer, TimeLabel, TimerContainer, Title } f
 
 const weddingDate = new Date('2024-04-22 15:20');
 
+const createLabel = (number: number, titles: [string, string, string]) => {
+  const cases = [2, 0, 1, 1, 1, 2];
+  return `${titles[number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]]}`;
+};
+
 export const TimerPage = () => {
   const [state, setState] = useState({ days: 0, hours: 0, minutes: 0 });
 
@@ -12,16 +17,16 @@ export const TimerPage = () => {
     const diff = weddingDate - now;
 
     setState({
-      days: Math.trunc(diff / 3600 / 1000 / 24),
-      hours: Math.trunc(diff / 3600 / 1000) % 24,
-      minutes: (Math.trunc(diff / 60 / 1000) + 1) % 60
+      days: Math.max(Math.trunc(diff / 3600 / 1000 / 24), 0),
+      hours: Math.max(Math.trunc(diff / 3600 / 1000) % 24, 0),
+      minutes: Math.max((Math.trunc(diff / 60 / 1000) + 1) % 60, 0)
     });
   }, []);
 
   useEffect(() => {
     callback();
     setInterval(callback, 1000);
-  }, []);
+  }, [callback]);
 
   return (
     <Container>
@@ -30,17 +35,17 @@ export const TimerPage = () => {
         <TimerContainer>
           <TimeContainer>
             {state.days}
-            <TimeLabel>Дня</TimeLabel>
+            <TimeLabel>{createLabel(state.days, ['День', 'Дня', 'Дней'])}</TimeLabel>
           </TimeContainer>
           <TimeContainer>:</TimeContainer>
           <TimeContainer>
             {state.hours}
-            <TimeLabel>Часов</TimeLabel>
+            <TimeLabel>{createLabel(state.hours, ['Час', 'Часа', 'Часов'])}</TimeLabel>
           </TimeContainer>
           <TimeContainer>:</TimeContainer>
           <TimeContainer>
             {state.minutes}
-            <TimeLabel>Минут</TimeLabel>
+            <TimeLabel>{createLabel(state.minutes, ['Минуту', 'Минуты', 'Минут'])}</TimeLabel>
           </TimeContainer>
         </TimerContainer>
       </Content>

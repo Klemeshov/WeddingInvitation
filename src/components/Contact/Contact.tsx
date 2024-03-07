@@ -32,7 +32,7 @@ export const Contact = ({
   name
 }: ContactProps) => {
   return (
-    <Container>
+    <Container animateIn="animate__flipInY" animateOnce>
       <ImgContainer>{img}</ImgContainer>
       <InfoContainer>
         <Name>{name}</Name>

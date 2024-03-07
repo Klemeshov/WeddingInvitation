@@ -32,14 +32,14 @@ export const DressCodePage = () => {
           Мы будем рады если вы своими нарядами поддержите цветовую гамму нашей свадьбы
         </Description>
         <ColorsContainer>
-          <ColorCircle $color="#130922" />
-          <ColorCircle $color="#3B4D0C" />
-          <ColorCircle $color="#9A9D8F" />
-          <ColorCircle $color="#D5D9DA" />
+          <ColorCircle $delay={1} $color="#130922" />
+          <ColorCircle $delay={2} $color="#3B4D0C" />
+          <ColorCircle $delay={3} $color="#9A9D8F" />
+          <ColorCircle $delay={4} $color="#D5D9DA" />
           <ColorsContainer>
-            <ColorCircle $color="#D1CCC9" />
-            <ColorCircle $color="#DCDBD9" />
-            <ColorCircle $color="#F5F5F5" $withBorder />
+            <ColorCircle $delay={5} $color="#D1CCC9" />
+            <ColorCircle $delay={6} $color="#DCDBD9" />
+            <ColorCircle $delay={7} $color="#F5F5F5" $withBorder />
           </ColorsContainer>
         </ColorsContainer>
       </ContentContainer>
@@ -47,20 +47,20 @@ export const DressCodePage = () => {
         <GenderContainer>
           <Gender>Мужчины</Gender>
           <MalesContainer>
-            <ExampleImage $src={man1} $area="q" />
-            <ExampleImage $src={man2} $area="w" />
-            <ExampleImage $src={man3} $area="e" />
-            <ExampleImage $src={man4} $area="r" />
+            <ExampleImage animateIn="animate__zoomInLeft" animateOnce $src={man1} $area="q" />
+            <ExampleImage animateIn="animate__zoomInDown" animateOnce $src={man2} $area="w" />
+            <ExampleImage animateIn="animate__zoomInUp" animateOnce $src={man3} $area="e" />
+            <ExampleImage animateIn="animate__zoomInRight" animateOnce $src={man4} $area="r" />
           </MalesContainer>
         </GenderContainer>
         <GenderContainer>
           <Gender>Девушки</Gender>
           <FemalesContainer>
-            <ExampleImage $src={women1} $area="q" />
-            <ExampleImage $src={women2} $area="w" />
-            <ExampleImage $src={women3} $area="e" />
-            <ExampleImage $src={women4} $area="r" />
-            <ExampleImage $src={women5} $area="t" />
+            <ExampleImage animateIn="animate__fadeInLeft" animateOnce $src={women1} $area="q" />
+            <ExampleImage animateIn="animate__fadeInDown" animateOnce $src={women2} $area="w" />
+            <ExampleImage animateIn="animate__fadeInUp" animateOnce $src={women3} $area="e" />
+            <ExampleImage animateIn="animate__fadeInRight" animateOnce $src={women4} $area="r" />
+            <ExampleImage animateIn="animate__fadeInUp" animateOnce $src={women5} $area="t" />
           </FemalesContainer>
         </GenderContainer>
       </ExamplesContainer>
