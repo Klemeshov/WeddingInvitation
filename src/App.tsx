@@ -12,6 +12,7 @@ import { ContactsPage } from './pages/ContactsPage';
 import { FooterPage } from './pages/FooterPage';
 import { guestsInfo } from './guestsInfo';
 import 'animate.css/animate.min.css';
+import { Cursor } from './components/Cursor';
 
 export const App = () => {
   const [searchParams] = useSearchParams();
@@ -27,6 +28,7 @@ export const App = () => {
       <ResetCss />
       <DefaultStyles />
       <Fonts />
+      <Cursor />
 
       <div>
         <MainPage name={guest.name} />

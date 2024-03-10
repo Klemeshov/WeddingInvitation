@@ -1,6 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { Container, Content, TimeContainer, TimeLabel, TimerContainer, Title } from './styled';
+import {
+  Container,
+  Content,
+  TimeContainer,
+  TimeLabel,
+  TimerContainer,
+  TimerSeparator,
+  Title
+} from './styled';
 
 const weddingDate = new Date('2024-04-22 15:21');
 
@@ -40,14 +48,14 @@ export const TimerPage = () => {
             </AnimationOnScroll>
             <TimeLabel>{createLabel(state.days, ['День', 'Дня', 'Дней'])}</TimeLabel>
           </TimeContainer>
-          <TimeContainer>:</TimeContainer>
+          <TimerSeparator>:</TimerSeparator>
           <TimeContainer>
             <AnimationOnScroll style={{ opacity: 1 }} animateIn="animate__pulse">
               {state.hours}
             </AnimationOnScroll>
             <TimeLabel>{createLabel(state.hours, ['Час', 'Часа', 'Часов'])}</TimeLabel>
           </TimeContainer>
-          <TimeContainer>:</TimeContainer>
+          <TimerSeparator>:</TimerSeparator>
           <TimeContainer>
             <AnimationOnScroll style={{ opacity: 1 }} animateIn="animate__pulse">
               {state.minutes}

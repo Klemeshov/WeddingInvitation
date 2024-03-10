@@ -158,6 +158,7 @@ export const ExampleImage = styled(AnimationOnScroll)<{ $src: string; $area: str
   height: 100%;
   user-select: none;
   align-self: ${({ $area }) => ($area === 'e' || $area === 'r' ? 'flex-end' : 'flex-start')};
+  animation-duration: 1.5s !important;
 `;
 
 export const MalesContainer = styled.div`

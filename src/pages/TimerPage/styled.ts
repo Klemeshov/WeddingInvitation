@@ -86,6 +86,22 @@ export const TimeContainer = styled.div`
   }
 `;
 
+export const TimerSeparator = styled(TimeContainer)`
+  animation: flashing 2s infinite ease-in-out;
+
+  @keyframes flashing {
+    from,
+    to,
+    20%,
+    80% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+`;
+
 export const TimeLabel = styled.span`
   font-size: 120px;
   line-height: 120px;
