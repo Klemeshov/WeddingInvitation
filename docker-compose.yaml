@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  kw:
+    container_name: kw
+    image: ${REGISTRY}/kw:latest
+    build: .
+    restart: always
+    ports:
+      - '8083:4000'
